@@ -7,6 +7,11 @@ const bcrypt = require('bcrypt')
 
 const users = []
 
+routes.get('/', (req,res)=>{
+    res.sendFile(__dirname+"/home.html")
+    
+})
+
 routes.get('/users',(req,res)=>{
     res.json(users)
 })
