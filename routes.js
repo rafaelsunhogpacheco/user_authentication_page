@@ -12,6 +12,14 @@ routes.get('/', (req,res)=>{
     
 })
 
+routes.get('/login', (req,res)=>{
+    res.sendFile(__dirname+'/login.html')
+})
+
+routes.get('/register', (req,res)=>{
+    res.sendFile(__dirname+'/register.html')
+})
+
 routes.get('/users',(req,res)=>{
     res.json(users)
 })
