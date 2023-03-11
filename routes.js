@@ -7,28 +7,14 @@ const bcrypt = require('bcrypt')
 
 const users = []
 
-routes.get('/', (req,res)=>{
-    res.sendFile(__dirname+"/home.html")
-    
-})
-
-routes.get('/login', (req,res)=>{
-    res.sendFile(__dirname+'/login.html')
-})
-
-routes.get('/register', (req,res)=>{
-    res.sendFile(__dirname+'/register.html')
-})
-
 routes.get('/users',(req,res)=>{
     res.json(users)
 })
 
 routes.post('/users', async (req,res)=>{
     try {
-        const salt = await bcrypt.genSalt()
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
-        const user = {name: req.body.name, password: hashedPassword}
+        const user = { name: req.body.name, password: hashedPassword}
         users.push(user)
         res.status(201).send() 
     } catch{

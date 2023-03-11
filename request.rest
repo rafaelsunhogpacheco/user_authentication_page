@@ -1,23 +1,23 @@
-GET http://localhost:3000/
 
-GET http://localhost:3000/users
+// Consultaros os usuários cadastrados
+#  GET http://localhost:3000/users
 
-# ##
 
+// Criar novo usuário
 # POST http://localhost:3000/users
 # Content-Type: application/json
 
 # {
-#     "name": "Rafael",
-#     "password": "password"
+#   "name": "Maria",
+#   "password": "password"
 # }
 
 
+// Requisitar acesso
+POST http://localhost:3000/users/login
+Content-Type: application/json
 
-# POST http://localhost:3000/users/login
-# Content-Type: application/json
-
-# {
-#     "name": "Rafael",
-#     "password": "password"
-# }
+{
+  "name": "Maria",
+  "password": "password"
+}
