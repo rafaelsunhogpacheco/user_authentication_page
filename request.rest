@@ -1,5 +1,5 @@
 
-// Consultaros os usuários cadastrados
+// Consultar os os usuários cadastrados
 #  GET http://localhost:3000/users
 
 
@@ -8,16 +8,16 @@
 # Content-Type: application/json
 
 # {
-#   "name": "Maria",
-#   "password": "password"
+#   "name": "Jose",
+#   "password": "chave"
 # }
 
 
 // Requisitar acesso
-POST http://localhost:3000/users/login
-Content-Type: application/json
+# POST http://localhost:3000/users/login
+# Content-Type: application/json
 
-{
-  "name": "Maria",
-  "password": "password"
-}
+# {
+#   "name": "Maria",
+#   "password": "pasord"
+# }
